@@ -1,13 +1,13 @@
-'''Boas pŕaticas'''
-'''2 linhas entre funções'''
-'''Declarar funções com letras minúsculas'''
-'''Dedclarar constantes com letras maíusculas'''
+"""Boas pŕaticas"""
+"""2 linhas entre funções"""
+"""Declarar funções com letras minúsculas"""
+"""Dedclarar constantes com letras maíusculas"""
 
 PI = 3.14
 
 
 def square(side):
-    '''Calcular area do quadrado'''
+    """Calcular area do quadrado"""
     return side * side
 
 
@@ -19,6 +19,7 @@ def circle(radius):
     return PI * radius * radius
 
 
-print("Área do quadrado:", square(10))
-print("Área do retângulo:", rectangle(2, 2))
-print("Área do círculo", circle(3))
+if __name__ == "__main__":
+    print("Área do quadrado:", square(10))
+    print("Área do retângulo:", rectangle(2, 2))
+    print("Área do círculo", circle(3))
