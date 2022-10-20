@@ -83,11 +83,15 @@ def email_verify(email):
 def verify_list_emails(array: list):
     response = []
     for email in array:
-        if (email_verify(email) == True):
-            response.append(email)
+      try:
+          email_verify(email)
+      except ValueError as error:
+          print(error)
+      else:
+          response.append(email)
 
 
     return response
 
 
-print(verify_list_emails(["nome#@dominio.com", "outro@dominio.com"]))
+print(verify_list_emails(["nome@dominio.com", "outro@dominio.com"]))

@@ -40,3 +40,21 @@ def test_email_verify_name_website_correct_with_number():
 
 def test_email_verify_name_website_correct_with_number():
     assert email_verify('joao1-1@gmail1.com') == True
+
+
+def test_verify_list_emails_valid_emails():
+    emails = ['paulo@gmail.com', 'jurema@yahoo.com']
+    valid_emails = ['paulo@gmail.com', 'jurema@yahoo.com']
+    assert verify_list_emails(emails) == valid_emails
+
+
+def test_verify_list_emails_invalid_emails():
+    emails = ['1paulo@gmail.com', 'jure#ma@yahoo.com']
+    valid_emails = []
+    assert verify_list_emails(emails) == valid_emails
+
+
+def test_verify_list_emails_validate_email():
+    emails = ['1paulo@gmail.com', 'jurema@yahoo.com']
+    valid_emails = ['jurema@yahoo.com']
+    assert verify_list_emails(emails) == valid_emails
