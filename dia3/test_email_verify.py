@@ -1,4 +1,3 @@
-import email
 import pytest
 from exercicios import email_verify, verify_list_emails
 
